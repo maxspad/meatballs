@@ -1,0 +1,5 @@
+outs:
+- md5: 10334cf24573b3cb470f9ad110466311
+  size: 593049
+  path: _chat.txt
+  isexec: true
