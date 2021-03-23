@@ -1,0 +1,10 @@
+stages:
+  whatsapp_to_csv:
+    cmd: python whatsapp_to_csv.py data/orig/_chat.txt data/preproc/_chat.csv
+    deps:
+    - data/orig/_chat.txt
+    - whatsapp_to_csv.py
+    params:
+    - whatsapp_to_csv.log_level
+    outs:
+    - data/preproc/_chat.csv

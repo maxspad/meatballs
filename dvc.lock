@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  whatsapp_to_csv:
+    cmd: python whatsapp_to_csv.py data/orig/_chat.txt data/preproc/_chat.csv
+    deps:
+    - path: data/orig/_chat.txt
+      md5: 10334cf24573b3cb470f9ad110466311
+      size: 593049
+    - path: whatsapp_to_csv.py
+      md5: 8ef20e558b1fc58336311b9fc7c40909
+      size: 1938
+    params:
+      params.yaml:
+        whatsapp_to_csv.log_level: INFO
+    outs:
+    - path: data/preproc/_chat.csv
+      md5: 7ab41b43e2e665411b443623402d8dff
+      size: 600334

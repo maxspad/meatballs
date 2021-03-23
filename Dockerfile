@@ -13,5 +13,6 @@ COPY ./requirements.txt /home/user/setup/
 WORKDIR /home/user/setup
 RUN pip install -r requirements.txt
 
+ENV PATH "$PATH:/home/user/.local/bin"
 RUN mkdir /home/user/proj
 WORKDIR /home/user/proj
