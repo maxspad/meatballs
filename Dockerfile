@@ -11,7 +11,7 @@ USER user
 COPY ./requirements.txt /home/user/setup/
 
 WORKDIR /home/user/setup
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --trusted-host files.pythonhosted.org --trusted-host pypi.org
 
 ENV PATH "$PATH:/home/user/.local/bin"
 RUN mkdir /home/user/proj
